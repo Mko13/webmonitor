@@ -11,12 +11,11 @@ import requests
 from bs4 import BeautifulSoup
 
 
-
 def checkstatus(url_addr):
     """ Make HTTP request to url. Return response object and status """
-    TIMEOUT = 5 # seconds
+    TIMEOUT = 5    # seconds
     try:
-        r = requests.get(url_addr, timeout = TIMEOUT)
+        r = requests.get(url_addr, timeout=TIMEOUT)
         r.raise_for_status()
         status = "Page OK."
     except requests.exceptions.HTTPError as http_error:
@@ -34,5 +33,4 @@ def findstring(content, expression):
         return False
     else:
         return True
-
 
