@@ -6,6 +6,7 @@ in 'config.ini' file.
 
 import re
 import datetime
+import time
 from configparser import ConfigParser
 
 import requests
@@ -73,5 +74,14 @@ def writelog(url_addr):
                         .format(datetime.datetime.now(),
                                 url_addr, response_code, status, time_elapsed,
                                 requirement, parameter, result))
+
+
+def start(interval=INTERVAL):
+    for url_item in config.items("urls"):
+        url = url_item[1]
+        print("Checking {} " .format(url))
+        writelog(url)
+    print("-----------------------------------")
+    time.sleep(interval)
 
 
