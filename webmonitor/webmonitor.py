@@ -6,10 +6,11 @@ in 'config.ini' file.
 
 import re
 import sys
+from configparser import ConfigParser
 
 import requests
 from bs4 import BeautifulSoup
-from configparser import ConfigParser
+
 
 # read configuration parameters
 config = ConfigParser()
