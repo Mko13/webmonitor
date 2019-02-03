@@ -40,10 +40,10 @@ def checkstatus(url_addr):
 def findstring(content, expression):
     """ Find string expression in the HTML content. Return boolean. """
     s = BeautifulSoup(content, 'html.parser')
-    if not s.find_all(string=re.compile(expression)):
-        return False
-    else:
+    if s.find_all(string=re.compile(expression)):
         return True
+    else:
+        return False
     
     
 INTERVAL = float(config.get("interval", "request_interval"))
