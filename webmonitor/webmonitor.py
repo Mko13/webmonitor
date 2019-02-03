@@ -24,11 +24,15 @@ def checkstatus(url_addr):
         r = requests.get(url_addr, timeout=TIMEOUT)
         r.raise_for_status()
         status = "Page OK."
-    except requests.exceptions.HTTPError as http_error:
-        status = http_error
-    except requests.exceptions.RequestException as request_error:
-        status = request_error
-        sys.exit(1)
+        return r, status
+    except requests.exceptions.HTTPError:
+        status = "HTTP error."
+    except requests.exceptions.ConnectTimeout:
+        status = "Connect timed out."
+    except requests.exceptions.ConnectionError:
+        status = "Connection Error."
+    except requests.exceptions.RequestException:
+        status = "Request error."
     return None, status
 
 
