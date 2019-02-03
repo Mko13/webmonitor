@@ -17,8 +17,8 @@ config.read('config.ini')
 
 
 def checkstatus(url_addr):
-    """ Make HTTP request to url. Return requests.models.Response
-    object and status """
+    """ Make HTTP request to url. Return requests.models. Return status,
+    and Response object if exists """
     TIMEOUT = 5    # seconds
     try:
         r = requests.get(url_addr, timeout=TIMEOUT)
