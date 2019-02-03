@@ -9,6 +9,11 @@ import sys
 
 import requests
 from bs4 import BeautifulSoup
+from configparser import ConfigParser
+
+# read configuration parameters
+config = ConfigParser()
+config.read('config.ini')
 
 
 def checkstatus(url_addr):
