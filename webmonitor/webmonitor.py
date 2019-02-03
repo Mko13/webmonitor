@@ -4,10 +4,12 @@ websites. Requirements for monitoring are defined
 in 'config.ini' file.
 """  
 
-import requests
-from bs4 import BeautifulSoup
 import re
 import sys
+
+import requests
+from bs4 import BeautifulSoup
+
 
 
 def checkstatus(url):
