@@ -5,6 +5,8 @@ in 'config.ini' file.
 """  
 
 import requests
+from bs4 import BeautifulSoup
+import re
 import sys
 
 
@@ -22,6 +24,12 @@ def checkstatus(url):
         sys.exit(1)
     return r, status
 
-        
-        
+
+def findstring(content, expression):
+    """ Find string expression in the HTML content. Return boolean. """
+    s = BeautifulSoup(content, 'html.parser')
+    if not s.find_all(string=re.compile(expression)):
+        return False
+    else:
+        return True
 
