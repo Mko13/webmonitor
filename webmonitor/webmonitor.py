@@ -85,3 +85,6 @@ def start(interval=INTERVAL):
     time.sleep(interval)
 
 
+if __name__ == "__main__":
+    while True:
+        start()
