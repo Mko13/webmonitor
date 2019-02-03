@@ -29,7 +29,7 @@ def checkstatus(url_addr):
     except requests.exceptions.RequestException as request_error:
         status = request_error
         sys.exit(1)
-    return r, status
+    return None, status
 
 
 def findstring(content, expression):
