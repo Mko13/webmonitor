@@ -7,6 +7,7 @@ in 'config.ini' file.
 import requests
 import sys
 
+
 def checkstatus(url):
     """ Make HTTP request to url. return status code """
     TIMEOUT = 5 # seconds
