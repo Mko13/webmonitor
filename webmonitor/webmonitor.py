@@ -4,3 +4,4 @@ websites. Requirements for monitoring are defined
 in 'config.ini' file.
 """  
 
+import requests
