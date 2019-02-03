@@ -11,7 +11,7 @@ import sys
 
 
 def checkstatus(url):
-    """ Make HTTP request to url. return status code """
+    """ Make HTTP request to url. """
     TIMEOUT = 5 # seconds
     try:
         r = requests.get(url, timeout = TIMEOUT)
