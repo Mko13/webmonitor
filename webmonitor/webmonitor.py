@@ -20,7 +20,8 @@ def checkstatus(url):
     except requests.exceptions.RequestException as request_error:
         status = request_error
         sys.exit(1)
-    return r.status_code, status, url
+    return r, status
+
         
         
 
