@@ -5,6 +5,7 @@ in 'config.ini' file.
 """  
 
 import requests
+import sys
 
 def checkstatus(url):
     """ Make HTTP request to url. return status code """
@@ -12,11 +13,13 @@ def checkstatus(url):
     try:
         r = requests.get(url, timeout = TIMEOUT)
         r.raise_for_status()
+        status = "Page OK."
     except requests.exceptions.RequestException as request_error:
-        print(request_error)
+        status = request_error
     except requests.exceptions.HTTPError as error:
-        print(error)
-    return r.status_code
-        #sys.exit(1)
+        status = error
+        sys.exit(1)
+    return r.status_code, status, url
+        
         
 
