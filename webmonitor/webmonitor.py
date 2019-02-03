@@ -5,7 +5,7 @@ in 'config.ini' file.
 """
 
 import re
-import sys
+import time
 from configparser import ConfigParser
 
 import requests
