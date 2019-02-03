@@ -12,7 +12,8 @@ from bs4 import BeautifulSoup
 
 
 def checkstatus(url_addr):
-    """ Make HTTP request to url. Return response object and status """
+    """ Make HTTP request to url. Return requests.models.Response
+        object and status """
     TIMEOUT = 5    # seconds
     try:
         r = requests.get(url_addr, timeout=TIMEOUT)
