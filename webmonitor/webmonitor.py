@@ -1,8 +1,8 @@
-""" This module includes the functions 
-for monitoring and logging the status of the 
+""" This module includes the functions
+for monitoring and logging the status of the
 websites. Requirements for monitoring are defined
 in 'config.ini' file.
-"""  
+"""
 
 import re
 import sys
@@ -11,8 +11,9 @@ import requests
 from bs4 import BeautifulSoup
 
 
+
 def checkstatus(url_addr):
-    """ Make HTTP request to url. Return response object and status """ 
+    """ Make HTTP request to url. Return response object and status """
     TIMEOUT = 5 # seconds
     try:
         r = requests.get(url_addr, timeout = TIMEOUT)
@@ -33,7 +34,5 @@ def findstring(content, expression):
         return False
     else:
         return True
-    
-    
 
 
