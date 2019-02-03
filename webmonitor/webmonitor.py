@@ -13,7 +13,7 @@ from bs4 import BeautifulSoup
 
 
 def checkstatus(url):
-    """ Make HTTP request to url. """
+    """ Make HTTP request to url. Return response object and status """ 
     TIMEOUT = 5 # seconds
     try:
         r = requests.get(url, timeout = TIMEOUT)
@@ -34,4 +34,7 @@ def findstring(content, expression):
         return False
     else:
         return True
+    
+    
+
 
