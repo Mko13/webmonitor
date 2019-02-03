@@ -10,10 +10,16 @@ import sys
 import requests
 from bs4 import BeautifulSoup
 
+# Time interval between requests in seconds. Can be done with argparse.
+if len(sys.argv) > 1:
+    INTERVAL = float(sys.argv[1])
+else:
+    INTERVAL = 2.0
+
 
 def checkstatus(url_addr):
     """ Make HTTP request to url. Return requests.models.Response
-        object and status """
+    object and status """
     TIMEOUT = 5    # seconds
     try:
         r = requests.get(url_addr, timeout=TIMEOUT)
@@ -34,4 +40,11 @@ def findstring(content, expression):
         return False
     else:
         return True
+
+
+
+
+    
+
+
 
