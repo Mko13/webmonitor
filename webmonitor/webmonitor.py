@@ -11,16 +11,15 @@ import requests
 from bs4 import BeautifulSoup
 
 
-
-def checkstatus(url):
+def checkstatus(url_addr):
     """ Make HTTP request to url. Return response object and status """ 
     TIMEOUT = 5 # seconds
     try:
-        r = requests.get(url, timeout = TIMEOUT)
+        r = requests.get(url_addr, timeout = TIMEOUT)
         r.raise_for_status()
         status = "Page OK."
-    except requests.exceptions.HTTPError as error:
-        status = error
+    except requests.exceptions.HTTPError as http_error:
+        status = http_error
     except requests.exceptions.RequestException as request_error:
         status = request_error
         sys.exit(1)
