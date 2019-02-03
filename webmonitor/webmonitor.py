@@ -10,12 +10,6 @@ import sys
 import requests
 from bs4 import BeautifulSoup
 
-# Time interval between requests in seconds. Can be done with argparse.
-if len(sys.argv) > 1:
-    INTERVAL = float(sys.argv[1])
-else:
-    INTERVAL = 2.0
-
 
 def checkstatus(url_addr):
     """ Make HTTP request to url. Return requests.models.Response
@@ -40,11 +34,6 @@ def findstring(content, expression):
         return False
     else:
         return True
-
-
-
-
     
-
-
-
+    
+INTERVAL = float(config.get("interval", "request_interval"))
