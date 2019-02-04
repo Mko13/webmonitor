@@ -24,6 +24,10 @@ Features
   DATE: 2019-02-04 02:20:52.145860 | URL: https://yle.fi/uutiset/osasto/news/ | STATUS: [200] Page OK. |
                               RESPONSE TIME: 0:00:00.170717 |  OTHER INFO: includes_expression 'About us': True
 
+DEPENDENIES ON EXTERNAL PACKAGES
+-----------
+requests
+beautifulsoup4
 
 
 TO DO
