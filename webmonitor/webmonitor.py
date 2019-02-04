@@ -50,7 +50,7 @@ def findstring(content, expression):
 INTERVAL = float(config.get("interval", "request_interval"))
 
 
-# logging module can be used
+# Alternatively, logging module can be used.
 def writelog(url_addr):
     """ Write the status of each webpage in a logfile
     TO DO: Make cleaner """
