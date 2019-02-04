@@ -47,7 +47,6 @@ def findstring(content, expression):
         return False
 
 
-INTERVAL = float(config.get("interval", "request_interval"))
 
 
 # Alternatively, logging module can be used.
@@ -74,6 +73,9 @@ def writelog(url_addr):
                         .format(datetime.datetime.now(),
                                 url_addr, response_code, status, time_elapsed,
                                 requirement, parameter, result))
+
+
+INTERVAL = float(config.get("interval", "request_interval"))
 
 
 def start(interval=INTERVAL):
