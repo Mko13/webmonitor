@@ -50,7 +50,7 @@ def findstring(content, expression):
 # Alternatively, logging module can be used.
 def writelog(url_addr):
     """ Write the status of each webpage in a logfile
-    TO DO: Make cleaner """
+    TO DO: Define LOGFORMAT separately """
 
     response, status = checkstatus(url_addr)
 
