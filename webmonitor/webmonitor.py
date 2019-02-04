@@ -53,8 +53,8 @@ def writelog(url_addr):
     TO DO: Make cleaner """
 
     response, status = checkstatus(url_addr)
-    requirement, _parameter = config.items('requirements')[0][:]
-    parameter = _parameter[1:-1]  # remove extra parenthesis
+    requirement, _expression = config.items('requirements')[0][:]
+    expression = _expression[1:-1]  # remove extra parenthesis
 
     if not response:
         response_code = "None"
@@ -62,7 +62,7 @@ def writelog(url_addr):
         time_elapsed = "None"
     else:
         response_code = response.status_code
-        result = findstring(response.text, parameter)
+        result = findstring(response.text, expression)
         time_elapsed = response.elapsed
 
     with open("webmonitor.log", "a+") as logfile:
@@ -70,7 +70,7 @@ def writelog(url_addr):
                         OTHER INFO: {} '{}': {} \n"
                         .format(datetime.datetime.now(),
                                 url_addr, response_code, status, time_elapsed,
-                                requirement, parameter, result))
+                                requirement, expression, result))
 
 
 INTERVAL = float(config.get("interval", "request_interval"))
