@@ -24,7 +24,8 @@ Features
   DATE: 2019-02-04 02:20:52.145860 | URL: https://yle.fi/uutiset/osasto/news/ | STATUS: [200] Page OK. |
                               RESPONSE TIME: 0:00:00.170717 |  OTHER INFO: includes_expression 'About us': True
 
-DEPENDENIES ON EXTERNAL PACKAGES
+
+Dependencies on external pakages
 -----------
 requests
 beautifulsoup4
@@ -35,8 +36,7 @@ TO DO
 * Implement an interface that shows the latest status of the monitored urls.
 
 
-
-THINGS TO CONSIDER
+Things to consider
 --------------------
 If we wanted to simultaneously monitor the connectivity (and latencies) from multiple geographically distributed locations and collect all the data to a single report that always reflects the current status across all locations, 
 in this case, one would have to take into account different time zones, daylight saving time changes, proxies,  restriction on accessibility depending on the location (where the request is made from).
