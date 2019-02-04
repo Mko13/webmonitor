@@ -47,8 +47,6 @@ def findstring(content, expression):
         return False
 
 
-
-
 # Alternatively, logging module can be used.
 def writelog(url_addr):
     """ Write the status of each webpage in a logfile
