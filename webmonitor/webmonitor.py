@@ -53,6 +53,7 @@ def writelog(url_addr):
     TO DO: Make cleaner """
 
     response, status = checkstatus(url_addr)
+
     requirement, _expression = config.items('requirements')[0][:]
     expression = _expression[1:-1]  # remove extra parenthesis
 
