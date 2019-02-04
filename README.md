@@ -32,3 +32,7 @@ TO DO
 
 
 
+THINGS TO CONSIDER
+--------------------
+If we wanted to simultaneously monitor the connectivity (and latencies) from multiple geographically distributed locations and collect all the data to a single report that always reflects the current status across all locations, 
+in this case, one would have to take into account different time zones, daylight saving time changes, proxies,  restriction on accessibility depending on the location (where the request is made from).
