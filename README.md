@@ -32,6 +32,11 @@ Dependencies on external pakages
 * beautifulsoup4
 
 
+Run
+--------
+python webmonitor.py
+
+
 TO DO
 ------
 * Implement an interface that shows the latest status of the monitored urls.
