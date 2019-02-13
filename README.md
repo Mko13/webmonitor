@@ -1,6 +1,6 @@
 # webmonitor
 
-The package wembonitor is a tool for monitoring the status of the web sites. 
+The package webmonitor is a tool for monitoring the status of the web sites. 
 Developed in Python3.5.2
 
 Features
