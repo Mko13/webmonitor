@@ -27,8 +27,8 @@ Features
 
 Dependencies on external pakages
 -----------
-*requests
-*beautifulsoup4
+* requests
+* beautifulsoup4
 
 
 TO DO
