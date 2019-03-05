@@ -4,14 +4,13 @@ websites. Requirements for monitoring are defined
 in 'config.ini' file.
 """
 
-import re
 import datetime
+import re
 import time
 from configparser import ConfigParser
 
 import requests
 from bs4 import BeautifulSoup
-
 
 # read configuration parameters
 config = ConfigParser()
@@ -49,8 +48,7 @@ def findstring(content, expression):
 
 # Alternatively, logging module can be used.
 def writelog(url_addr):
-    """ Write the status of each webpage in a logfile
-    TO DO: Define LOGFORMAT separately """
+    """ Write the status of each webpage in a logfile """
 
     response, status = checkstatus(url_addr)
 
